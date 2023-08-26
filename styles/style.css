@@ -22,8 +22,11 @@ blockquote {
 .content-section {
   box-sizing: border-box;
   width: 100%;
-  max-width: 360px;
-  min-height: 100px;
+  /* max-width: 1280px; */
+  max-width: 768px;
+  min-width: 280px;
+  /* max-width: 360px; */
+  /* min-height: 100px; */
   margin: auto;
 }
 
@@ -38,7 +41,45 @@ blockquote {
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 24px 20px;
+}
+
+.header__logo {
+  display: block;
+  width: 78px;
+}
+
+.header__logo-image {
+  width: 100%;
+}
+
+.header__menu-list {
+  display: flex;
+  /* flex-direction: column; */
+  /* gap: 12px; */
+  list-style: none;
+}
+
+.header__menu-item {
+  padding-right: 20px;
+}
+
+.header__menu-item:last-child {
+  padding-right: 0;
+}
+
+.header__menu-link {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.2;
+  text-underline-offset: 4px;
+}
+
+.header__menu-item_active .header__menu-link {
+  text-decoration: none;
 }
 
 .cover {
@@ -59,4 +100,18 @@ blockquote {
 
 .footer {
   padding: 20px;
+}
+
+@media screen and (max-width: 380px) {
+  .header__menu-list {
+    flex-direction: column;
+  }
+
+  .header__menu-item {
+    padding-bottom: 12px;
+  }
+
+  .header__menu-item:last-child {
+    padding-bottom: 0;
+  }
 }
